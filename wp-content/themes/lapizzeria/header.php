@@ -18,3 +18,17 @@
             </div>
         </div>
     </header>
+
+    <nav class="menu-sitio">
+        <div class="contenedor navegacion">
+            <?php
+                $args = array(
+                    'theme_location' => 'header-menu',
+                    'container' => 'nav',
+                    'container_class' => 'menu-sitio'        
+                );
+
+                wp_nav_menu( $args );
+            ?>
+        </div>
+    </nav>
