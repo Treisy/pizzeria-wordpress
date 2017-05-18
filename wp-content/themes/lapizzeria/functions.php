@@ -1,5 +1,13 @@
 <?php
-// Add styles
+
+// Agregar imágenes destacadas
+function lapizzeria_setup() {
+    add_theme_support('post-thumbnails');
+}
+
+add_action('after_setup_theme', 'lapizzeria_setup');
+
+// Agregar estilos
 function lapizzeria_styles() {
     // Registrar los estillos
     wp_register_style('normalize', get_template_directory_uri().'/css/normalize.css', array(), '7.0.0');
@@ -21,7 +29,7 @@ function lapizzeria_styles() {
 
 add_action('wp_enqueue_scripts', 'lapizzeria_styles');
 
-// Create menus
+// Crear menús
 function lapizzeria_menus() {
     register_nav_menus(array(
         'header-menu' => _('Header Menu', lapizzeria),
