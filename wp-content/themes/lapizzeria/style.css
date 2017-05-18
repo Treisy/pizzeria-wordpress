@@ -135,3 +135,69 @@ nav.sociales li a[href*="instagram.com"]::before {
         float: right;
     }
 }
+
+
+/*Navegación Principal*/
+
+nav.menu-sitio {
+    display: none;
+}
+
+nav.menu-sitio ul {
+    list-style: none;
+    display: table;
+    margin: 0;
+    padding: 0;
+}
+
+nav.menu-sitio ul li a {
+    text-align: center;
+    padding: 20px 0;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+nav.menu-sitio ul li.current_page_item a {
+    border-bottom: 8px solid #a61206;
+}
+
+nav.menu-sitio ul li:hover {
+    background-color: #f19f30;
+}
+
+@media only screen and (min-width:768px) {
+    nav.menu-sitio {
+        display: block;
+    }
+    nav.menu-sitio ul li {
+        display: table-cell;
+        width: 1%;
+    }
+}
+
+
+/*Responsive Menu*/
+
+@media only screen and (max-width:767px) {
+    .mobile-menu a {
+        height: 40px;
+        background: #a61206;
+        width: 100%;
+        color: #ffffff;
+        display: block;
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .mobile-menu a {
+        display: none;
+    }
+}
