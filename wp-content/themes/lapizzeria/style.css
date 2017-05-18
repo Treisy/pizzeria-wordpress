@@ -10,3 +10,60 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: restaurant, mobile first, responsive, pizza
 Text Domain: lapizzeria
 */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.contenedor {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/*Encabezado*/
+
+header.encabezado-sitio {
+    border-bottom: 1px solid #c1c1c1;
+}
+
+div.logo {
+    text-align: center;
+}
+
+img.logotipo {
+    width: 250px;
+}
+
+
+/*Media queries*/
+
+@media only screen and (min-width:768px) {
+    div.logo {
+        text-align: left;
+    }
+    header.encabezado-sitio .contenedor {
+        position: relative;
+    }
+    .informacion-encabezado {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    div.direccion p {
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    div.logo {
+        text-align: center;
+    }
+}
