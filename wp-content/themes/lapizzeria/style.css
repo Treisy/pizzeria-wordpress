@@ -32,6 +32,7 @@ html {
 
 header.encabezado-sitio {
     border-bottom: 1px solid #c1c1c1;
+    padding-bottom: 30px;
 }
 
 div.logo {
@@ -40,6 +41,18 @@ div.logo {
 
 img.logotipo {
     width: 250px;
+}
+
+div.direccion {
+    display: block;
+    clear: both;
+    padding-top: 10px;
+}
+
+div.direccion p {
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
 }
 
 
@@ -65,5 +78,60 @@ img.logotipo {
 @media only screen and (min-width:992px) {
     div.logo {
         text-align: center;
+    }
+}
+
+
+/*Menu redes sociales*/
+
+nav.sociales ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.sr-text {
+    display: none;
+}
+
+nav.sociales ul li {
+    position: relative;
+    display: inline-block;
+}
+
+nav.sociales ul li a::before {
+    font-family: 'FontAwesome';
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+    content: '\f08e';
+    font-size: 30px;
+    color: #000000;
+    -webkit-font-smoothing: antialised;
+}
+
+nav.sociales li a[href*="facebook.com"]::before {
+    content: '\f09a';
+}
+
+nav.sociales li a[href*="twitter.com"]::before {
+    content: '\f099';
+}
+
+nav.sociales li a[href*="pinterest.com"]::before {
+    content: '\f231';
+}
+
+nav.sociales li a[href*="youtube.com"]::before {
+    content: '\f16a';
+}
+
+nav.sociales li a[href*="instagram.com"]::before {
+    content: '\f16d';
+}
+
+@media only screen and (min-width:768px) {
+    nav.sociales ul {
+        float: right;
     }
 }
