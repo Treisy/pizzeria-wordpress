@@ -12,6 +12,7 @@ function lapizzeria_styles() {
     // Registrar los estillos
     wp_register_style('normalize', get_template_directory_uri().'/css/normalize.css', array(), '7.0.0');
     wp_register_style('fontawesome', get_template_directory_uri().'/css/font-awesome.min.css', array('normalize'), '4.7.0');
+    wp_register_style('google_fonts', 'https://fonts.googleapis.com/css?family=Open+Sans|Raleway', array(), '1.0.0');
     wp_register_style('style', get_template_directory_uri().'/style.css', array('normalize'), '1.0');
 
     //Llamar a los estilos 
