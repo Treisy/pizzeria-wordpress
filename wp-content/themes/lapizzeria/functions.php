@@ -3,6 +3,8 @@
 // Agregar imágenes destacadas
 function lapizzeria_setup() {
     add_theme_support('post-thumbnails');
+
+    add_image_size('nosotros', 437, 291, true);
 }
 
 add_action('after_setup_theme', 'lapizzeria_setup');
