@@ -58,8 +58,8 @@ h4 {
     display: block;
 }
 
-.texto-centrado {
-    text-align: center;
+.texto-rojo {
+    color: #a61206;
 }
 
 .contenedor {
@@ -68,6 +68,10 @@ h4 {
     margin: 0 auto;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /*Encabezado*/
 
@@ -403,5 +407,73 @@ div.contenido-caja h3 {
 @media only screen and (min-width:992px) {
     div.contenido-caja {
         padding-top: 50px 0;
+    }
+}
+
+/*Especialidades*/
+.nuestras-especialidades {
+    padding: 0 60px;
+}
+
+div.texto-especialidad{
+    padding: 20px;
+}
+
+div.texto-especialidad h4 {
+    border-bottom: 1px solid #dfdfdd;
+    padding-bottom: 15px;
+    font-weight: 700px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+div.texto-especialidad h4 span {
+    float: right;
+    font-size: 30px;
+    color: #f19f30;
+    font-family: 'Open Sans', sans-serif;
+}
+
+div.texto-especialidad p {
+    color: #3d3d3d;
+    line-height: 30px;
+}
+
+/*Grid*/
+@media only screen and (min-width:768px) {
+    .contenedor-grid {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .contenedor-grid::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    [class*="columnas"] {
+        padding: 0 10px;
+        float: left;
+    }
+
+    .columnas1-4 {
+        width: 25%;
+    }
+
+    .columnas2-4 {
+        width: 50%;
+    }
+
+    .columnas3-4 {
+        width: 75%;
+    }
+
+    .columnas1-3 {
+        width: 33.3%;
+    }
+
+    .columnas2-3 {
+        width: 66.6%;
     }
 }
