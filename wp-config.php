@@ -18,21 +18,23 @@
  * @package WordPress
  */
 
+$url = parse_url(getenv('DATABASE_URL') ? getenv('DATABASE_URL') : getenv('CLEARDB_DATABASE_URL'));
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'pizzeria-wordpress');
+define('DB_NAME', trim($url['path'], '/'));
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', $url['user']);
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', $url['pass']);
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', $url['host']);
 
 /** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8mb4');
+define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
@@ -46,14 +48,23 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'N5F[6Zb;j{B?9I^1uvsL:C*Ein:T8?N]q{]S_;)|rf8d?KS[5kh iH[@`pVbuYOo');
-define('SECURE_AUTH_KEY',  '(AJ}9G*.~A[qR@~e<bkKA+coseLqCHu8r#^I>|c-C[M+a<P38<Fuxon.cMCwO5Fi');
-define('LOGGED_IN_KEY',    'ImGsvehgzQx<1L#uAZuBPb(1dFr`sK2iE)ns}#3H9G{TYek!FlUvg!lLZn3btjch');
-define('NONCE_KEY',        '0KU{8+e5^jlqJ>-zjY9>F^ufRrUbiCDt9nKmTATGH@-eU=d<xhIzzW@`op.)TDzV');
-define('AUTH_SALT',        '3,#(Feb|3798I]E7:sgNBxt&GG9Oi#P~Xcd[AxC81-Y-9,_sJYm:_d#CRA_ITL$P');
-define('SECURE_AUTH_SALT', ',5JGdBn3ws]rb]`iLoySo`/PhxF0,>-hocF66mI}{D}Ov-uv^n5B7AWAcD/iY=SO');
-define('LOGGED_IN_SALT',   'q?QiC9lJf9vvP&Y97M7n~+~pXSf,Q:Es@UE-}>oS~<v6w|3:US%^P+390PhV2;b%');
-define('NONCE_SALT',       'j3JN^JyZ0xY.V4gJSQ)s+io!m89#Ek@K|0{:rh#pxL];-L#MjG3&@8dlXJ5*|W(j');
+define('AUTH_KEY',         getenv('AUTH_KEY'));
+define('SECURE_AUTH_KEY',  getenv('SECURE_AUTH_KEY'));
+define('LOGGED_IN_KEY',    getenv('LOGGED_IN_KEY'));
+define('NONCE_KEY',        getenv('NONCE_KEY'));
+define('AUTH_SALT',        getenv('AUTH_SALT'));
+define('SECURE_AUTH_SALT', getenv('SECURE_AUTH_SALT'));
+define('LOGGED_IN_SALT',   getenv('LOGGED_IN_SALT'));
+define('NONCE_SALT',       getenv('NONCE_SALT'));
+
+//define('AUTH_KEY',         'N5F[6Zb;j{B?9I^1uvsL:C*Ein:T8?N]q{]S_;)|rf8d?KS[5kh iH[@`pVbuYOo');
+//define('SECURE_AUTH_KEY',  '(AJ}9G*.~A[qR@~e<bkKA+coseLqCHu8r#^I>|c-C[M+a<P38<Fuxon.cMCwO5Fi');
+//define('LOGGED_IN_KEY',    'ImGsvehgzQx<1L#uAZuBPb(1dFr`sK2iE)ns}#3H9G{TYek!FlUvg!lLZn3btjch');
+//define('NONCE_KEY',        '0KU{8+e5^jlqJ>-zjY9>F^ufRrUbiCDt9nKmTATGH@-eU=d<xhIzzW@`op.)TDzV');
+//define('AUTH_SALT',        '3,#(Feb|3798I]E7:sgNBxt&GG9Oi#P~Xcd[AxC81-Y-9,_sJYm:_d#CRA_ITL$P');
+//define('SECURE_AUTH_SALT', ',5JGdBn3ws]rb]`iLoySo`/PhxF0,>-hocF66mI}{D}Ov-uv^n5B7AWAcD/iY=SO');
+//define('LOGGED_IN_SALT',   'q?QiC9lJf9vvP&Y97M7n~+~pXSf,Q:Es@UE-}>oS~<v6w|3:US%^P+390PhV2;b%');
+//define('NONCE_SALT',       'j3JN^JyZ0xY.V4gJSQ)s+io!m89#Ek@K|0{:rh#pxL];-L#MjG3&@8dlXJ5*|W(j');
 
 /**#@-*/
 

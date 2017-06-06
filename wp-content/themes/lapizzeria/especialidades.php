@@ -1,7 +1,7 @@
 
 <?php
     /*
-    * Template Name: Espcialidades
+    * Template Name: Especialidades
     */
 ?>
 
